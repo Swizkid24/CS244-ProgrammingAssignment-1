@@ -67,4 +67,28 @@ public abstract class BinaryTree {
 			return findMax(root.getRight());
 		}
 	}
+
+
+public int getNodeCount() {// getter method to count the total amount of nodes  // Benjamin 4/27
+
+	
+return nodeCount(root)	
+
+}
+private int nodeCount(Node node) { // recursive method to count the total amount of nodes // Benjamin 4/27
+	if (node==null) {
+	return 0;
+	}
+	else {
+		
+	return (countNodes(node.getLeft()) + countNodes(node.getRight()) +1 );	
+	
+	}
+	 
+ }
+public void clearTree() {// Benjamin 4/27 // method to clear the entire tree when nessassary
+	
+ root =null;
+	
+}
 }
